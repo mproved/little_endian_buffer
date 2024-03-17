@@ -220,7 +220,7 @@ func (buf *Buffer) WriteFloat64(value float64) {
 }
 
 func (buf *Buffer) ReadBytes(num int) (value []byte) {
-	value = buf.bytes[buf.pointer:num]
+	value = buf.bytes[buf.pointer : buf.pointer+num]
 	buf.pointer += num
 
 	return
